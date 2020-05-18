@@ -43,8 +43,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Alt>D
 gsettings set org.gnome.settings-daemon.plugins.media-keys play "['Pause']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Alt>Right']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>Left']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute ['<Alt>Pause']
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute ['<Shift>Pause']
+gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['<Alt>Pause']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Shift>Pause']"
 
 # Input sources
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Space']"
