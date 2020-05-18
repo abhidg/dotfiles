@@ -33,6 +33,8 @@ dconf write /org/gnome/shell/keybindings/toggle-overview "['<Super>Space','<Ctrl
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']" 
 # ^-- to swap vs map both to escape: "['caps:swapescape']". 
 
+# Disable showing shortcuts in dash-to-dock
+gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
  
 # Make the Dock more macOS-like
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
