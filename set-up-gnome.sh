@@ -13,7 +13,7 @@ dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-down "['<Super><
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-left "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-right "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-up "['<Super><Ctrl>Left','<Super><Ctrl>Up']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-applications "['<Ctrl>Tab','<Alt>Tab']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-applications "['<Alt>Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-applications-backward "['<Shift><Alt>Tab','<Shift><Ctrl>Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group "['<Ctrl>Above_Tab','<Alt>Above_Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group-backward "['<Shift><Ctrl>Above_Tab','<Shift><Alt>Above_Tab']"
