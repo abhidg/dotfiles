@@ -2,6 +2,7 @@
 # Disable many keybindings that manage windows to free them up for VSCode,
 # except for a few ones I also had on macOS
 dconf write /org/gnome/desktop/wm/keybindings/maximize "['<Super>z']"
+dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-down "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-left "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-left "['disabled']"
