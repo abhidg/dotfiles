@@ -29,7 +29,7 @@ dconf write /org/gnome/desktop/wm/keybindings/unmaximize "['<Super><Shift>z']"
 dconf write /org/gnome/mutter/keybindings/switch-monitor "['XF86Display']"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-left "['<Super><Alt>Left']"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-right "['<Super><Alt>Right']"
-dconf write /org/gnome/shell/keybindings/toggle-overview "['<Super>Space','<Ctrl>Space']"
+dconf write /org/gnome/shell/keybindings/toggle-overview "['<Super>Space']"
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']" 
 # ^-- to swap vs map both to escape: "['caps:swapescape']". 
 
@@ -44,7 +44,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 # Media keys
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Alt>Up']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Alt>Down']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys play "['Pause']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys play "['Pause','<Ctrl>Space']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Alt>Right']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>Left']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['<Alt>Pause']"
