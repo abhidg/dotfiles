@@ -13,8 +13,6 @@ dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-down "['<Super><
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-left "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-right "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-up "['<Super><Ctrl>Left','<Super><Ctrl>Up']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-applications "['<Alt>Tab']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-applications-backward "['<Shift><Alt>Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group "['<Ctrl>Above_Tab','<Alt>Above_Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group-backward "['<Shift><Ctrl>Above_Tab','<Shift><Alt>Above_Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-input-source "['<Alt>Space']"
@@ -50,7 +48,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>Left
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['<Alt>Pause']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Shift>Pause']"
 # Terminal
-gsettings set org.gnome.settings-daemon.plugins.media-keys terminal ['<Super>Return']
+gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>Return']"
 
 # Input sources
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Space']"
