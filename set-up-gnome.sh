@@ -27,7 +27,7 @@ dconf write /org/gnome/desktop/wm/keybindings/unmaximize "['<Super><Shift>z']"
 dconf write /org/gnome/mutter/keybindings/switch-monitor "['XF86Display']"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-left "['<Super><Alt>Left']"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-right "['<Super><Alt>Right']"
-dconf write /org/gnome/shell/keybindings/toggle-overview "['<Super>Space']"
+#dconf write /org/gnome/shell/keybindings/toggle-overview "['<Super>Space']"
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']" 
 # ^-- to swap vs map both to escape: "['caps:swapescape']". 
 
