@@ -31,6 +31,11 @@ dconf write /org/gnome/mutter/keybindings/toggle-tiled-right "['<Super><Alt>Righ
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']" 
 # ^-- to swap vs map both to escape: "['caps:swapescape']". 
 
+# Reset to default Adwaita theme
+gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
+gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
 # Disable showing shortcuts in dash-to-dock
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
  
