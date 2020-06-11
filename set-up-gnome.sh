@@ -38,10 +38,10 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 
 # Disable showing shortcuts in dash-to-dock
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
- 
-# Make the Dock more macOS-like
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false  # always autohide
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height true  # icons-only task manager
+gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink true
 # ^-- to reset e.g.: $ gsettings reset org.gnome.shell.extensions.dash-to-dock dash-max-icon-size
 
 # Media keys
