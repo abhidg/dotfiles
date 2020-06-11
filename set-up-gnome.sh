@@ -9,10 +9,10 @@ dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-left "['disabled']
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-left "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-right "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-up "['disabled']"
-dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-down "['<Super><Ctrl>Right','<Super><Ctrl>Down']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-down "['<Super><Shift>Right','<Super><Shift>Down']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-left "['disabled']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-right "['disabled']"
-dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-up "['<Super><Ctrl>Left','<Super><Ctrl>Up']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-up "['<Super><Shift>Left','<Super><Shift>Up']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group "['<Ctrl>Above_Tab','<Alt>Above_Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group-backward "['<Shift><Ctrl>Above_Tab','<Shift><Alt>Above_Tab']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-input-source "['<Alt>Space']"
@@ -34,7 +34,7 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 # Reset to default Adwaita theme
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 
 # Disable showing shortcuts in dash-to-dock
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
@@ -52,12 +52,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Alt>Right']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>Left']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['<Alt>Pause']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Shift>Pause']"
-# Terminal
-gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>Return']"
-
-# Input sources
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Space']"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt><Shift>Space']"
 
 # Activate Gnome Activities Overview on hot corner <-- careful you may find this annoying
 gsettings set org.gnome.desktop.interface enable-hot-corners true
@@ -78,7 +72,6 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 # Move trash can from desktop to dock
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
-gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
 
 # Show directories above files
 dconf write /org/gtk/settings/file-chooser/sort-directories-first true
