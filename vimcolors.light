@@ -1,0 +1,3 @@
+colorscheme github
+let g:airline_theme = "github"
+let g:lightline = { 'colorscheme': 'github' }

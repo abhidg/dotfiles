@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ -z $1 ]; then
+  echo "usage: twilight [light|dark]"
+  exit 1
+fi
+option="$1"
+if [ $option != "light" ] && [ $option != "dark" ]; then
+  echo "usage: twilight [light|dark]"
+  exit 1
+fi
+ln -sf .xsettingsd.$option .xsettingsd
+ln -sf ~/src/dotfiles/vimcolors.$option .vimcolors
+killall xsettingsd
+exec xsettingsd
