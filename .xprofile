@@ -1,0 +1,4 @@
+#!/bin/sh
+if (xinput list --name-only | grep "PixArt USB Optical Mouse"); then
+    xinput --set-button-map "PixArt USB Optical Mouse" 1 3 2
+fi
