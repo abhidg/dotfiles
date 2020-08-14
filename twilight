@@ -8,7 +8,5 @@ if [ $option != "light" ] && [ $option != "dark" ]; then
   echo "usage: twilight [light|dark]"
   exit 1
 fi
-ln -sf .xsettingsd.$option .xsettingsd
-ln -sf ~/src/dotfiles/vimcolors.$option .vimcolors
-killall xsettingsd
-exec xsettingsd
+ln -sf ~/src/dotfiles/vimcolors.$option $HOME/.vimcolors
+ln -sf ~/src/dotfiles/xsettingsd.$option.$HOSTNAME $HOME/.xsettingsd && killall xsettingsd && exec xsettingsd
