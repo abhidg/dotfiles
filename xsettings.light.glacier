@@ -45,7 +45,7 @@ Net/EnableInputFeedbackSounds 0
 Net/FallbackIconTheme "gnome"
 Net/IconThemeName "Adwaita"
 Net/SoundThemeName "freedesktop"
-Net/ThemeName "Adwaita"
+Net/ThemeName "cdetheme-solaris"
 Xft/Antialias 1
 Xft/DPI 98304
 Xft/HintStyle "hintslight"

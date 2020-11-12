@@ -13,16 +13,18 @@ fi
 light() {
   echo light > $CONFIG
   ln -sf ~/src/dotfiles/vimcolors.light $HOME/.vimcolors
-  ln -sf ~/src/dotfiles/xsettings.light.`hostname` $HOME/.xsettingsd
+  ln -sf ~/.plus/gruvbox-light.xresources $HOME/xresources.theme
+  # ln -sf ~/src/dotfiles/xsettings.light.`hostname` $HOME/.xsettingsd
 }
 dark() {
   echo dark > $CONFIG
   ln -sf ~/src/dotfiles/vimcolors.dark $HOME/.vimcolors
-  ln -sf ~/src/dotfiles/xsettings.dark.`hostname` $HOME/.xsettingsd
+  ln -sf ~/.plus/gruvbox-dark.xresources $HOME/xresources.theme
+  # ln -sf ~/src/dotfiles/xsettings.dark.`hostname` $HOME/.xsettingsd
 }
 toggle() {
   if [ `cat $CONFIG` = "dark" ]; then light; else dark; fi
 }
 
 $option
-killall xsettingsd && exec xsettingsd
+xrdb $HOME/.Xresources

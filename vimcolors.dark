@@ -1,3 +1,4 @@
-colorscheme nord
-let g:airline_theme = "nord"
-let g:lightline = { 'colorscheme': 'nord' }
+set bg=dark
+colorscheme gruvbox
+let g:airline_theme = "gruvbox"
+let g:lightline = { 'colorscheme': 'gruvbox' }
