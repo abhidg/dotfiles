@@ -1,3 +1,4 @@
-colorscheme github
-let g:airline_theme = "github"
-let g:lightline = { 'colorscheme': 'github' }
+" set background=light
+colorscheme tempus_totus
+" let g:airline_theme = "github"
+" let g:lightline = { 'colorscheme': 'github' }

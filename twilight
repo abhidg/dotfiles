@@ -13,16 +13,16 @@ fi
 light() {
   echo light > $CONFIG
   ln -sf ~/src/dotfiles/vimcolors.light $HOME/.vimcolors
-  ln -sf ~/src/dotfiles/xsettings.light.`hostname` $HOME/.xsettingsd
+  ln -sf ~/.plus/tempus_totus.Xcolors $HOME/xresources.theme
 }
 dark() {
   echo dark > $CONFIG
   ln -sf ~/src/dotfiles/vimcolors.dark $HOME/.vimcolors
-  ln -sf ~/src/dotfiles/xsettings.dark.`hostname` $HOME/.xsettingsd
+  ln -sf ~/.plus/tempus_night.Xcolors $HOME/xresources.theme
 }
 toggle() {
   if [ `cat $CONFIG` = "dark" ]; then light; else dark; fi
 }
 
 $option
-killall xsettingsd && exec xsettingsd
+xrdb $HOME/.Xresources
