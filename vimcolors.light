@@ -1,4 +1,4 @@
-" set background=light
-colorscheme tempus_totus
-" let g:airline_theme = "github"
-" let g:lightline = { 'colorscheme': 'github' }
+set bg=light
+colorscheme gruvbox
+let g:airline_theme = "gruvbox"
+let g:lightline = { 'colorscheme': 'gruvbox' }
