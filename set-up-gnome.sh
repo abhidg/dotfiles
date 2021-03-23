@@ -3,7 +3,6 @@ dconf write /org/gtk/settings/file-chooser/sort-directories-first true
 dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'gb+dvorak')]"
-gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Alt>Up']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Alt>Down']"
