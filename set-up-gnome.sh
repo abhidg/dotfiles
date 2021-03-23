@@ -1,6 +1,5 @@
 # Modified from https://kvz.io/tobuntu.html
 dconf write /org/gtk/settings/file-chooser/sort-directories-first true
-dconf write /org/gnome/desktop/wm/keybindings/maximize "['<Super>z']"
 dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 gsettings set org.gnome.desktop.interface clock-show-weekday true
