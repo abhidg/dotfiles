@@ -1,0 +1,8 @@
+# Put this file in /etc/udev/hwdb.d/
+# Then sudo systemd-hwdb update && sudo udevadm trigger
+# Kensington Mouse Trackball:
+# * Rebind bottom-left from BTN_LEFT to BTN_RIGHT
+# * Rebind bottom-right from BTN_RIGHT to BTN_LEFT
+evdev:input:b*v047Dp1020*
+ KEYBOARD_KEY_90001=btn_right
+ KEYBOARD_KEY_90002=btn_left
