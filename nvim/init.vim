@@ -28,16 +28,11 @@ Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
-let g:tempus_enforce_background_color=1
-colorscheme tempus_totus
-
 set hidden 
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
-set t_Co=256
 set nocompatible
 inoremap hh <ESC>
-
 
 " Terminal setup.
 set vb t_vb=""				" No beeps or visual bells.
