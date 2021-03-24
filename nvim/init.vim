@@ -12,12 +12,14 @@ let g:pymode_lint_checkers = ['pyflakes']
 let g:pymode_warnings = 1
 let g:ale_linters = {'python': ['flake8']}
 let g:sneak#s_next = 1
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'editorconfig/editorconfig-vim'
