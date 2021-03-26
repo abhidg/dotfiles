@@ -20,3 +20,7 @@ GNOME_TERMINAL_SETTINGS=org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/le
 gsettings set $GNOME_TERMINAL_SETTINGS default-size-rows 40
 gsettings set $GNOME_TERMINAL_SETTINGS default-size-columns 100
 gsettings set $GNOME_TERMINAL_SETTINGS cell-height-scale 1.15
+
+gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature "uint32 2700"
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
