@@ -4,6 +4,7 @@ dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'gb+dvorak')]"
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 # gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"  # fractional scaling
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['F4']"
