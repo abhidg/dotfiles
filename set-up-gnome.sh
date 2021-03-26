@@ -15,3 +15,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Shift><A
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['<Alt>Pause']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Shift>Pause']"
 
+GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
+GNOME_TERMINAL_SETTINGS=org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/
+gsettings set $GNOME_TERMINAL_SETTINGS default-size-rows 40
+gsettings set $GNOME_TERMINAL_SETTINGS default-size-columns 100
+gsettings set $GNOME_TERMINAL_SETTINGS cell-height-scale 1.15
