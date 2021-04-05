@@ -82,9 +82,9 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ -f /usr/lib/git-core/git-sh-prompt ]; then
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
     git_prompt=yes
-    . /usr/lib/git-core/git-sh-prompt
+    . /usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 PROMPT_DIRTRIM=2
 if [ "$color_prompt" = yes ]; then
@@ -169,9 +169,8 @@ if [ -f /usr/bin/git ] || [ -f /usr/local/bin/git ]; then
     . /usr/share/bash-completion/completions/git
     for al in `git config --list | grep -oP '(?<=alias\.)\w+'`; do
         alias g$al="git $al"
-        
         complete_func=_git_$(__git_aliased_command $al)
-        function_exists $complete_fnc && __git_complete g$al $complete_func
+        function_exists $complete_func && __git_complete g$al $complete_func
     done
 fi
 
@@ -180,6 +179,5 @@ if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
 fi
 if [ -f /usr/bin/fzf ]; then
-   source /usr/share/doc/fzf/examples/key-bindings.bash
-   source /usr/share/doc/fzf/examples/completion.bash
+   source /usr/share/fzf/shell/key-bindings.bash
 fi
