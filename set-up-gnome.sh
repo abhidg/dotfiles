@@ -1,7 +1,7 @@
 # Modified from https://kvz.io/tobuntu.html
 dconf write /org/gtk/settings/file-chooser/sort-directories-first true
 dconf write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
-dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape', 'altwin:meta_alt']"
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'gb+dvorak')]"
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.keybindings always-on-top "@as ['<Super>t']"
