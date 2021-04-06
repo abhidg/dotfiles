@@ -1,4 +1,4 @@
-source /usr/share/doc/fzf/examples/fzf.vim
+" source /usr/share/doc/fzf/examples/fzf.vim
 set mouse=a
 let mapleader = ","
 let maplocalleader = " "
