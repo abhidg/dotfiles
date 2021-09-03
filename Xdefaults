@@ -1,0 +1,143 @@
+! vim:ts=8
+
+Xft.dpi: 96
+#ifdef HIDPI
+! pkg_add xcursor-dmz
+Xcursor.theme:			dmz
+Xcursor.size:			24
+#endif
+
+! a muted palette for athena things like xterm, xfontsel, etc.
+#define BG			#e6e1c5
+#define FG			#252525
+*.background:			BG
+*.foreground:			FG
+
+XTerm*geometry:			80x40
+URxvt.geometry:			80x40
+
+*.scrollbar.background:		BG
+*.scrollbar.foreground:		FG
+*.scrollBar.minimumThumb:	50
+*.scrollbar.width:		10
+
+*.borderColor:			BG
+
+! a muted palette
+
+! black
+*.color0:			FG
+*.color8:			#333333
+
+! red
+*.color1:			#7e4949
+*.color9:			#a07777
+
+! green
+*.color2:			#547a3e
+*.color10:			#86a278
+
+! yellow
+*.color3:			#82755b
+*.color11:			#bdb3a0
+
+! blue
+*.color4:			#5b6982
+*.color12:			#8791a2
+
+! magenta
+*.color5:			#755b82
+*.color13:			#917d9c
+
+! cyan
+*.color6:			#5b8275
+*.color14:			#6f9a8b
+
+! white (gray)
+*.color7:			#d9d7cc
+*.color15:			#e5e5e5
+
+#ifdef HIDPI
+*.font:				-*-lucida-medium-r-*-*-24-*-*-*-*-*-*-*
+#else
+*.font:				-*-lucida-medium-r-*-*-12-*-*-*-*-*-*-*
+#endif
+
+! xterm-specific settings
+
+#ifdef HIDPI
+*.internalBorder:		22
+#else
+*.internalBorder:		12
+#endif
+*.saveLines:			20000
+*.scrollBar:			false
+XTerm.rightScrollBar:		true
+URxvt.scrollBar_right:		true
+URxvt.scrollstyle:		xterm
+*.selectToClipboard:		true
+*.termName:			xterm-256color
+*.utmpInhibit:			true
+URxvt.loginShell:		true
+
+! hide when i type
+XTerm.pointerMode:		2
+URxvt.pointerBlank:		true
+
+! needed by ratpoison
+XTerm.allowSendEvents:		true
+! which disables allowColorOps, but empty the list of actual disabled ops
+! which effectively re-enables color ops
+XTerm.disallowedColorOps:
+
+XTerm.visualBell:		false
+
+XTerm.vt100.faceName:		monospace:size=11
+URxvt.font:			xft:monospace:size=12,xft:noto emoji:size=12
+URxvt.boldFont:			xft:monospace:weight=bold:size=12,xft:noto emoji:weight=bold:size=12,xft:symbola
+URxvt.letterSpace:		-1
+URxvt.lineSpace: 3
+
+! make alt+v/command+v paste clipboard
+XTerm.vt100.translations:	#override\
+    Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)\n\
+    Super <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
+URxvt.keysym.M-v:		eval:paste_clipboard
+URxvt.keysym.Mod4-v:		eval:paste_clipboard
+
+! support right-clicking urls to open them
+URxvt.perl-ext-common:		default,matcher,selection-to-clipboard,-selection
+URxvt.url-launcher:		HOME/bin/firefox
+URxvt.matcher.button:		3
+URxvt.matcher.rend.0:		Uline
+
+! make xaw scrollbars act like normal ones
+XTerm.*.Scrollbar.translations: #override\
+    <Btn1Down>: StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
+    <Btn2Down>: StartScroll(Forward) \n\
+    <Btn3Down>: StartScroll(Backward) \n\
+    <Btn1Motion>: MoveThumb() NotifyThumb() \n\
+    <BtnUp>: NotifyScroll(Proportional) EndScroll()
+
+SshAskpass*inputTimeout:	15
+
+! invert for qconsole
+qconsole.*.background:		FG
+qconsole.*.foreground:		#999999
+qconsole.*.borderColor:		FG
+qconsole.*.color0:		#999999
+
+#ifdef HIDPI
+SshAskpass*Button.font:		-*-lucida-medium-r-*-*-24-*-*-*-*-*-*-*
+SshAskpass*Dialog.font:		-*-lucida-medium-r-*-*-26-*-*-*-*-*-*-*
+SshAskpass*Indicator.width:	30
+SshAskpass*Indicator.height:	15
+#endif
+
+XClock*.update:			1
+XClock*.analog:			False
+XClock*.render:			True
+XClock*.padding:		40
+XClock*.face:			Microsoft Sans Serif:size=20
+XClock*.strftime:		%H:%M:%S %D
+XClock*.background:		#c0c7c8
