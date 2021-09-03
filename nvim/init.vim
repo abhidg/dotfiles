@@ -1,4 +1,4 @@
-" source /usr/share/doc/fzf/examples/fzf.vim
+source /usr/share/doc/fzf/examples/fzf.vim
 set mouse=a
 let mapleader = ","
 let maplocalleader = " "
@@ -13,9 +13,10 @@ let g:pymode_warnings = 1
 let g:ale_linters = {'python': ['flake8']}
 let g:sneak#s_next = 1
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'vim-airline/vim-airline'
+Plug 'ap/vim-buftabline'
 Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -28,6 +29,10 @@ Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
+" let g:airline_theme='gruvbox'
+" let g:gruvbox_invert_selection=0
+" set background=dark
+colorscheme jcs
 set hidden 
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -65,7 +70,7 @@ set guioptions-=m
 set guioptions-=r
 set guioptions-=L
 set statusline=%<%f\ %h%m%r\%=%-14.(%l,%c%V%)\ %P
-highlight StatusLine cterm=none ctermbg=black
+" highlight StatusLine cterm=none ctermbg=black
 
 " Miscellaneous settings.
 set shortmess+=I	" Short messages for intro screen
@@ -165,8 +170,6 @@ imap <F10> :py3f /usr/share/vim/addons/syntax/clang-format-10.py<cr>
 map // :nohlsearch<CR>
 map <F12> :update<CR>
 map \ :update<CR>
-" ctrl-m to :make
-noremap <C-M> :make<CR>
 nnoremap Q gqap
 nnoremap ; :
 vnoremap Q gq
