@@ -1,6 +1,6 @@
-source /usr/share/doc/fzf/examples/fzf.vim
+source /usr/share/nvim/runtime/plugin/fzf.vim
 set mouse=a
-let mapleader = ","
+let mapleader = "\<space>"
 let maplocalleader = " "
 syntax on
 let g:pandoc#syntax#conceal#use = 0
@@ -168,7 +168,7 @@ imap <F10> :py3f /usr/share/vim/addons/syntax/clang-format-10.py<cr>
 
 "save shortcut
 map // :nohlsearch<CR>
-map <F12> :update<CR>
+map <leader>u :update<CR>
 map \ :update<CR>
 nnoremap Q gqap
 nnoremap ; :
