@@ -1,0 +1,5 @@
+#!/bin/sh
+# Minimal gnome setup for i3
+dconf write /org/gtk/settings/file-chooser/sort-directories-first true
+gsettings set org.gnome.desktop.interface font-hinting slight
+gsettings set org.gnome.desktop.interface font-name 'sans 10'
