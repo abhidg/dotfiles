@@ -9,8 +9,8 @@ gsettings set org.gnome.desktop.wm.keybindings always-on-top "@as ['<Super>t']"
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 # gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"  # fractional scaling
 
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['F4']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['F3']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Alt>F4']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Alt>F3']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys play "['Pause','<Ctrl>Space']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Shift><Alt>Right']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Shift><Alt>Left']"
