@@ -9,7 +9,7 @@
 general {
         colors = true
         interval = 60
-        separator = ""
+        separator = " "
 }
 
 order += "battery all"
@@ -28,7 +28,7 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "  %percentage %remaining "
+        format = "== %percentage %remaining "
 }
 
 disk "/" {
@@ -36,15 +36,15 @@ disk "/" {
 }
 
 load {
-        format = " %1min"
+        format = "^^ %1min"
 }
 
 memory {
-        format = " m %used    "
+        format = "|| %used  "
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%d %b  %H:%M "
+        format = "%d %b %H:%M "
 }
