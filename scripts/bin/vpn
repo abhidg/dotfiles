@@ -1,0 +1,3 @@
+#!/bin/sh
+eval `openconnect --authenticate https://vpn.ox.ac.uk`
+[ -n "$COOKIE" ] && echo "$COOKIE" | doas openconnect --cookie-on-stdin $CONNECT_URL --servercert $FINGERPRINT --resolve $RESOLVE
