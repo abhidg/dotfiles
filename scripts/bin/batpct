@@ -1,0 +1,9 @@
+#!/bin/sh
+now=$(cat /sys/class/power_supply/BAT0/charge_now)
+full=$(cat /sys/class/power_supply/BAT0/charge_full)
+power_connected=$(cat /sys/class/power_supply/AC/online)
+if [ $power_connected -eq 1 ]; then
+   charging=" • "
+fi
+pc=$(echo "scale=3; $now/$full * 100" | bc | sed 's/\..*//g')
+echo $charging$pc%
