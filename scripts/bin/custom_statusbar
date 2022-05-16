@@ -6,7 +6,7 @@ do
 	nyc="$(TZ=America/New_York date +"%I:%M %p")"
 	la="$(TZ=America/Los_Angeles date +"%I:%M %p")"
 	local="$(date +"%A %Y-%m-%d %H:%M")"
-	battery=$(batpct)
+	battery=$(~/bin/batpct)
 	printf "%s | %s UTC | %s IST | %s EST | %s PST | %s Local\n" "$battery" "$utc" "$kol" "$nyc" "$la" "$local"
 	sleep 10
 done
