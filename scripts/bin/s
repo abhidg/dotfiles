@@ -1,4 +1,0 @@
-#!/bin/sh
-
-export MOZ_ENABLE_WAYLAND=1
-XDG_RUNTIME_DIR=~/.run dbus-launch --exit-with-session sway
