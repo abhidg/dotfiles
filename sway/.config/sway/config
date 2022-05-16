@@ -188,11 +188,11 @@ seat seat0 xcursor_theme Adwaita 24
 #
 
     # volume keys
-    bindsym Mod1+F4 exec pactl set-sink-volume @DEFAULT_SINK@ +10%
-    bindsym Mod1+F3 exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym Mod1+F4 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym Mod1+F3 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym Shift+Pause exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume @DEFAULT_SINK@ +10%
-    bindsym XF86AudioLowerVolume exec  pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec  pactl set-sink-volume @DEFAULT_SINK@ -5%
 
     # mute
     bindsym XF86AudioMute exec  pactl set-sink-mute @DEFAULT_SINK@ toggle
