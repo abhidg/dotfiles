@@ -189,6 +189,31 @@ output DP-3 scale 2
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
+
+#
+# Media keys
+#
+
+    # volume keys
+    bindsym Mod1+F4 exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym Mod1+F3 exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym Shift+Pause exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym XF86AudioLowerVolume exec  pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+    # mute
+    bindsym XF86AudioMute exec  pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+    # brightness
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+    # play/pause media
+    bindsym Pause exec playerctl play-pause
+    # bindsym Mod1+Control+space exec  rofi -show window
+    # bindsym Mod1+Shift+space exec  rofi -show drun
 #
 # Resizing containers:
 #
