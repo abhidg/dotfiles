@@ -1,9 +1,18 @@
 #!/bin/sh
-now=$(cat /sys/class/power_supply/BAT0/charge_now)
-full=$(cat /sys/class/power_supply/BAT0/charge_full)
+hostname=$(hostname)
 power_connected=$(cat /sys/class/power_supply/AC/online)
 if [ $power_connected -eq 1 ]; then
-   charging=" • "
+  charging=" • "
 fi
-pc=$(echo "scale=3; $now/$full * 100" | bc | sed 's/\..*//g')
-echo $charging$pc%
+
+if [ $hostname == glacier ]; then
+  now=$(cat /sys/class/power_supply/BAT0/charge_now)
+  full=$(cat /sys/class/power_supply/BAT0/charge_full)
+  pc=$(echo "scale=3; $now/$full * 100" | bc | sed 's/\..*//g')
+  echo $charging$pc%
+elif [ $hostname == cambrian ]; then
+  battery=$(cat /sys/class/power_supply/BAT1/capacity)
+  echo $charging$battery%
+else
+  echo no battery
+fi
