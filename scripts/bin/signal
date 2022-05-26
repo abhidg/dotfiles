@@ -1,0 +1,1 @@
+nix-shell -p signal-desktop --run 'signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland'

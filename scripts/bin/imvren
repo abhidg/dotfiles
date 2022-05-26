@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ -z "$imv_current_file" ]; then
+  echo Not called from imv, aborting.
+  exit 1
+fi
+parent="$(dirname "$imv_current_file")"
+ext="${imv_current_file##*.}"
+if [ -z "$1" ]; then
+  echo Specify what the file should be renamed to
+  exit 1
+fi
+newfile="$parent/$1.$ext"
+echo "Will rename to $newfile"
+mv "$imv_current_file" "$newfile"
