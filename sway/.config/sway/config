@@ -79,7 +79,8 @@ seat seat0 xcursor_theme Adwaita 24
     bindsym $mod+d exec $menu
 
     bindsym $mod+space exec foot --app-id=launcher bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
-    for_window [app_id="^launcher$"] floating enable, border none, resize set width 25 ppt height 20 ppt
+    bindsym Mod1+space exec foot --app-id=launcher bash -c 'cat ~/urls/*.txt | fzf | cut -f 2 | xargs -r swaymsg exec ~/bin/browse'
+    for_window [app_id="^launcher$"] floating enable, border none, resize set width 40 ppt height 30 ppt
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -188,6 +189,7 @@ seat seat0 xcursor_theme Adwaita 24
 #
 
     bindsym Print exec ~/bin/shotfocus
+    bindsym $mod+Print exec grim -g "$(slurp)" ~/$(date +'%Y-%m-%d_%H%M%S_screenshot.png')
 #
 # Media keys
 #
