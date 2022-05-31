@@ -29,6 +29,7 @@ seat seat0 xcursor_theme Adwaita 24
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 
+exec mako
 ### Idle configuration
 #
 # Example configuration:
@@ -78,9 +79,19 @@ seat seat0 xcursor_theme Adwaita 24
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # passwords
+    bindsym $mod+p exec pass-dmenu
+
+    # mako
+    bindsym $mod+n exec makoctl dismiss
+    bindsym $mod+Shift+n exec makoctl dismiss -a
+
+    # launcher with fzf
     bindsym $mod+space exec foot --app-id=launcher bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
     bindsym Mod1+space exec foot --app-id=launcher bash -c 'cat ~/urls/*.txt | fzf | cut -f 2 | xargs -r swaymsg exec ~/bin/browse'
+
     for_window [app_id="^launcher$"] floating enable, border none, resize set width 40 ppt height 30 ppt
+    for_window [app_id="^pinentry"] floating enable
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

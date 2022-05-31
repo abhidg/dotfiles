@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+list() {
+  find ~/.password-store/ | sed -re 's/\.gpg$//' | sed -re 's:^.*/.password-store/::;/.gpg-id/d;/^$/d' | grep -v ^.git
+}
+target=$(list | dmenu -l 5)
+wl-copy $(pass $target)
+sleep 30
+wl-copy -c
