@@ -6,6 +6,9 @@ case "$1" in
   *google.com*)
      exec chromium-browser "$1"
      ;;
+  *whatsapp.com*)
+     exec chromium-browser "$1"
+     ;;
   *)
      exec firefox "$1"
      ;;
