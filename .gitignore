@@ -1,0 +1,3 @@
+aerc/.config/aerc/*.conf
+!aerc/.config/aerc/binds.conf
+!aerc/.config/aerc/aerc.conf
