@@ -30,6 +30,7 @@ seat seat0 xcursor_theme Adwaita 24
 #
 
 exec mako
+exec kanshi
 ### Idle configuration
 #
 # Example configuration:
