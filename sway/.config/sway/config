@@ -64,6 +64,9 @@ exec kanshi
         xkb_variant "dvorak"
     }
 
+# Colors
+
+client.focused #333333 #cccccc #111111  #292d2e #222222
 ### Key bindings
 #
 # Basics:
