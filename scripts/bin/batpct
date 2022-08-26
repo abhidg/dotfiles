@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 hostname=$(hostname)
 power_connected=$(cat /sys/class/power_supply/AC/online)
 if [ $power_connected -eq 1 ]; then
