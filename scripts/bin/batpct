@@ -1,4 +1,9 @@
 #!/bin/bash
+
+battery_capacity() {
+    echo $(cat /sys/class/power_supply/$1/capacity)%
+}
+
 hostname=$(hostname)
 power_connected=$(cat /sys/class/power_supply/AC/online)
 if [ $power_connected -eq 1 ]; then
@@ -6,13 +11,9 @@ if [ $power_connected -eq 1 ]; then
 fi
 
 if [ $hostname == glacier ]; then
-  now=$(cat /sys/class/power_supply/BAT0/charge_now)
-  full=$(cat /sys/class/power_supply/BAT0/charge_full)
-  pc=$(echo "scale=3; $now/$full * 100" | bc | sed 's/\..*//g')
-  echo $charging$pc%
+  echo $charging$(battery_capacity BAT0)
 elif [ $hostname == cambrian ]; then
-  battery=$(cat /sys/class/power_supply/BAT1/capacity)
-  echo $charging$battery%
+  echo "${charging}main $(battery_capacity BAT0) | extra $(battery_capacity BAT1)"
 else
   echo no battery
 fi
