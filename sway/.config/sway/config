@@ -91,7 +91,8 @@ client.focused #333333 #cccccc #111111  #292d2e #222222
     bindsym $mod+Shift+n exec makoctl dismiss -a
 
     # launcher with fzf
-    bindsym $mod+space exec foot --app-id=launcher bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+    # bindsym $mod+space exec foot --app-id=launcher bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+    bindsym $mod+space exec wofi --show drun
     bindsym Mod1+space exec foot --app-id=launcher bash -c 'cat ~/urls/*.txt | fzf | cut -f 2 | xargs -r swaymsg exec ~/bin/browse'
 
     for_window [app_id="^launcher$"] floating enable, border none, resize set width 40 ppt height 30 ppt
