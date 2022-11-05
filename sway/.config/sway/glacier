@@ -1,3 +1,5 @@
 output * bg ~/w/current fill
-output eDP-1 scale 2.5
+output eDP-1 scale 2.5 position 0,0
 output DP-3 scale 2
+output DP-1 scale 1
+input 1149:4128:Kensington_Expert_Mouse left_handed enabled
