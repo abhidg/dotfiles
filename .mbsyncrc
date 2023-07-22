@@ -1,0 +1,26 @@
+IMAPAccount work
+Host outlook.office365.com
+User unit1234@OX.AC.UK
+PassCmd "mutt_oauth2.py <path-to-token-file>"
+SSLType IMAPS
+SSLVersion TLSv1.2
+AuthMechs XOAUTH2
+
+IMAPStore work-remote
+Account work
+
+MaildirStore work-local
+# Note the trailing slash on the Path statement!
+Path ~/mail/work/
+Inbox ~/mail/work/Inbox
+SubFolders Legacy
+
+Channel work
+Far :work-remote:
+Near :work-local:
+#Include everything
+Patterns *
+# Sync changes (creations/deletions) with the server
+Create Both
+Expunge Both
+Sync All
