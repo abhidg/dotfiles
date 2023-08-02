@@ -31,6 +31,10 @@ seat seat0 xcursor_theme Adwaita 24
 
 exec mako
 exec kanshi
+
+gaps inner 8
+gaps outer 5
+default_border pixel 4
 ### Idle configuration
 #
 # Example configuration:
@@ -66,13 +70,13 @@ exec kanshi
 
 # Colors
 
-client.focused #333333 #cccccc #111111  #292d2e #222222
+client.focused #44bc44 #44bc44 #111111
 ### Key bindings
 #
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term fish
+    bindsym $mod+Return exec $term
 
     # Lock
     bindsym $mod+escape exec swaylockd -c 111111
@@ -92,7 +96,7 @@ client.focused #333333 #cccccc #111111  #292d2e #222222
 
     # launcher with fzf
     # bindsym $mod+space exec foot --app-id=launcher bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
-    bindsym $mod+space exec wofi --show drun
+    bindsym $mod+space exec rofi -show drun
     bindsym Mod1+space exec foot --app-id=launcher bash -c 'cat ~/urls/*.txt | fzf | cut -f 2 | xargs -r swaymsg exec ~/bin/browse'
 
     for_window [app_id="^launcher$"] floating enable, border none, resize set width 40 ppt height 30 ppt
