@@ -10,7 +10,7 @@ if [ $power_connected -eq 1 ]; then
   charging=" • "
 fi
 
-if [ $hostname == glacier ]; then
+if [ $hostname == mycorrhiza ]; then
   echo $charging$(battery_capacity BAT0)
 elif [ $hostname == cambrian ]; then
   echo "${charging}main $(battery_capacity BAT0) | extra $(battery_capacity BAT1)"
