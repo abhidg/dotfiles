@@ -6,6 +6,7 @@ set sendmail="/opt/homebrew/bin/msmtp"
 set spoolfile=~/mail/work/Inbox
 set autoedit
 set edit_headers
+set copy=no
 
 alternative_order text/plain text/enriched text/html
 auto_view text/html
