@@ -1,4 +1,3 @@
-mailboxes ~/mail/work/*
 set from=abhishek.dasgupta@dtc.ox.ac.uk
 set folder=~/mail/work
 set envelope_from
@@ -7,6 +6,8 @@ set spoolfile=~/mail/work/Inbox
 set autoedit
 set edit_headers
 set copy=no
+mailboxes =Inbox =TODO =GitHub =Archive
+set sidebar_visible
 
 alternative_order text/plain text/enriched text/html
 auto_view text/html
